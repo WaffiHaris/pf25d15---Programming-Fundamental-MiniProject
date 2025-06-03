@@ -1,4 +1,3 @@
-public class TTTConsoleNonOO {
 import java.util.Scanner;
     /**
      * Tic-Tac-Toe: Two-player, console-based, non-graphics, non-OO version.
@@ -156,4 +155,4 @@ import java.util.Scanner;
             }
         }
     }
-}
+
