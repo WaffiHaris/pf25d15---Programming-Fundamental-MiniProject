@@ -34,6 +34,7 @@ public class TTTConsole {
         // Initialize the board, currentState and currentPlayer
         initGame();
 // in main()
+        boolean invalid = true;
         do {
             // Play the game once
             initGame();
@@ -59,11 +60,13 @@ public class TTTConsole {
             // Prompt the user whether to play again
             System.out.print("Play again (y/n)? ");
             char ans = in.next().charAt(0);
-            if (ans != 'y' && ans != 'Y') {
+            if (ans != 'n' && ans != 'N') {
                 System.out.println("Bye!");
                 System.exit(0);  // terminate the program
+            } else if (ans == 'y' && ans != 'Y'){
+                invalid = false;
             }
-        } while (true);  // repeat until user did not answer yes
+        } while (invalid);  // repeat until user did not answer yes
     }
 
     /** Initialize the board[][], currentState and currentPlayer for a new game*/
