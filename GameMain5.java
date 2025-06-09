@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- * Tic-Tac-Toe: Two-player Graphic version using Board4 and Cell4.
+ * Tic-Tac-Toe: Two-player Graphic version using Board5 and Cell5.
  */
 public class GameMain5 extends JPanel {
     private static final long serialVersionUID = 1L;
@@ -30,11 +30,11 @@ public class GameMain5 extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 int mouseX = e.getX();
                 int mouseY = e.getY();
-                int row = mouseY / Cell4.SIZE;
-                int col = mouseX / Cell4.SIZE;
+                int row = mouseY / Cell5.SIZE;
+                int col = mouseX / Cell5.SIZE;
 
                 if (currentState == State5.PLAYING) {
-                    if (row >= 0 && row < Board4.ROWS && col >= 0 && col < Board5.COLS
+                    if (row >= 0 && row < Board5.ROWS && col >= 0 && col < Board5.COLS
                             && board.cells[row][col].content == Seed5.NO_SEED) {
                         currentState = board.stepGame5(currentPlayer, row, col);
                         currentPlayer = (currentPlayer == Seed5.CROSS) ? Seed5.NOUGHT : Seed5.CROSS;
@@ -65,7 +65,7 @@ public class GameMain5 extends JPanel {
         // Panel layout
         setLayout(new BorderLayout());
         add(statusBar, BorderLayout.PAGE_END);
-        setPreferredSize(new Dimension(Board4.CANVAS_WIDTH, Board4.CANVAS_HEIGHT + 30));
+        setPreferredSize(new Dimension(Board5.CANVAS_WIDTH, Board5.CANVAS_HEIGHT + 30));
         setBorder(BorderFactory.createLineBorder(COLOR_BG_STATUS, 2, false));
 
         // Initialize game
